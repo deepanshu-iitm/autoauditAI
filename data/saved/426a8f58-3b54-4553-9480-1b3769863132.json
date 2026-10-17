@@ -1,0 +1,68 @@
+{
+  "run_id": "426a8f58-3b54-4553-9480-1b3769863132",
+  "kind": "checkout",
+  "url": "https://www.chumbak.com/products/guldasta-lentil-bowl-haveli-socials",
+  "goal": "You are a shopper in Bangalore recording exactly what this store shows a customer. Report facts only, never opinions.\nNever pay, never enter card or UPI details, never create an account, and never submit a phone number or email to a screen that sends an OTP or a login code.\n\n1. On this product page, record the product name, the price shown, any struck-through price, every fee, charge, or delivery condition mentioned on this page (delivery, shipping, handling, COD, platform, convenience, free-delivery thresholds), and any urgency text such as a countdown timer with its remaining time, 'only N left', or 'N people viewing'.\n2. If the page asks for a pincode or delivery location, enter 560037. If a size or variant must be chosen, pick the first one in stock. Add exactly one unit to the cart.\n3. Open the cart. List every line item and whether the shopper added it. List every option that is already selected or ticked without the shopper choosing it and that adds a product, a charge, or a consent: insurance, a donation, a membership, a tip, gift wrap, a protection plan, or marketing, SMS, or WhatsApp consent. Do not list badges, labels, or payment-method icons. Copy the exact wording of any button or link used to decline an add-on or offer.\n4. Continue to checkout as a guest. If an ordinary address form appears, fill it with name \"Audit Shopper\", email \"audit.shopper@example.com\", phone \"9000000000\", address \"OJone, Marathahalli, Bengaluru\", pincode 560037, and continue. If checkout instead opens a phone, OTP, or login step, do not submit anything: record the order summary visible on that screen and stop. Also stop at the first screen that asks for payment, or at a captcha.\n5. List every charge added on top of the product price in the order summary (delivery, shipping, handling, COD, platform, convenience, packaging, gift wrap, tax added separately) with its amount in rupees and the first step where it appeared. Do not list MRP, discounts, the subtotal, or charges shown as free or ₹0. Record the final payable amount.\n\nRecord urgency text from every step, with the step where you saw it. If something is not on the page, leave it empty or null. Do not guess or calculate amounts that are not shown.",
+  "started_at": "2026-10-17T08:44:15.320Z",
+  "finished_at": "2026-10-17T08:47:12.574Z",
+  "elapsed_seconds": 177,
+  "status": "COMPLETED",
+  "streaming_url": "https://ip-204-236-183-124.tetra-data.production.tinyfish.io/tf-20b9f374-1bdc-4bdd-9a25-631af2e50d35/stream/0",
+  "progress": [
+    "Visit product page to gather initial information",
+    "Extract product details from product page",
+    "Extract detailed pricing and fee information",
+    "Get visual details of product page",
+    "Get precise product page details",
+    "Check for pincode input and product variants",
+    "Get detailed visual info about product page elements",
+    "Enter pincode 560037 for delivery check",
+    "Submit pincode 560037 for delivery check",
+    "Find add to cart button and any variants",
+    "Add product to cart",
+    "Check mini cart contents and any add-ons",
+    "Proceed to checkout from mini cart",
+    "Check if mini cart is still visible",
+    "Click Buy Now to go to checkout",
+    "Check current page state for checkout options",
+    "Find checkout button element",
+    "Click Buy Now to proceed to checkout",
+    "Click BUY NOW via headless button",
+    "Check checkout screen details",
+    "Get exact checkout screen details",
+    "Compile all findings for final report",
+    "Final capture of checkout screen before stopping",
+    "Final report with all findings"
+  ],
+  "result": {
+    "store_name": "Chumbak",
+    "product_name": "Guldasta Lentil Bowl | Haveli Socials",
+    "product_url": "https://www.chumbak.com/products/guldasta-lentil-bowl-haveli-socials",
+    "listed_price_inr": 299,
+    "struck_price_inr": null,
+    "charges_mentioned_on_product_page": [
+      "Free delivery",
+      "Secure payments",
+      "Cash on delivery",
+      "Shipping information: Orders are shipped within 1-2 days. We charge Rs.99 for orders with value below Rs.999.",
+      "Next day delivery available in select locations!",
+      "Same day delivery in Bangalore"
+    ],
+    "urgency_claims": [],
+    "cart_items": [
+      {
+        "name": "Guldasta Lentil Bowl | Haveli Socials",
+        "price_inr": 299,
+        "added_by_shopper": true
+      }
+    ],
+    "preselected_options": [],
+    "decline_wording": [],
+    "fee_lines": [],
+    "final_payable_inr": 299,
+    "furthest_stage": "checkout",
+    "blocked_by": "otp",
+    "notes": "The checkout flow redirected to a Shiprocket-powered checkout page which requires a mobile number (10-digit input with +91 country code) before showing a full address form. Per the instructions, when checkout opens a phone/OTP step, we record the order summary visible on that screen and stop. The order summary showed: 1 item (Guldasta Lentil Bowl | Haveli Socials) at Rs.299.00, with no additional charges (delivery, shipping, handling, COD, platform, convenience, tax, gift wrap, etc.) listed separately. No pre-selected add-ons (insurance, donation, membership, tip, gift wrap, protection plan, marketing/SMS/WhatsApp consent) were present in the mini cart or on the checkout screen. No urgency text (countdown timer, low stock, people viewing) was present. The pincode 560037 was entered on the product page and delivery was confirmed for Bangalore, Karnataka with estimated delivery by 31 October."
+  },
+  "error": null
+}

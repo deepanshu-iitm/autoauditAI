@@ -1,0 +1,117 @@
+{
+  "run_id": "fbd707a3-5327-44a0-9a80-e6282f0bcfdc",
+  "kind": "checkout",
+  "url": "https://www.kamaayurveda.com/in/rose-lip-care.html",
+  "goal": "You are a shopper in Bangalore recording exactly what this store shows a customer. Report facts only, never opinions.\nNever pay, never enter card or UPI details, never create an account, and never submit a phone number or email to a screen that sends an OTP or a login code.\n\n1. On this product page, record the product name, the price shown, any struck-through price, every fee, charge, or delivery condition mentioned on this page (delivery, shipping, handling, COD, platform, convenience, free-delivery thresholds), and any urgency text such as a countdown timer with its remaining time, 'only N left', or 'N people viewing'.\n2. If the page asks for a pincode or delivery location, enter 560037. If a size or variant must be chosen, pick the first one in stock. Add exactly one unit to the cart.\n3. Open the cart. List every line item and whether the shopper added it. List every option that is already selected or ticked without the shopper choosing it and that adds a product, a charge, or a consent: insurance, a donation, a membership, a tip, gift wrap, a protection plan, or marketing, SMS, or WhatsApp consent. Do not list badges, labels, or payment-method icons. Copy the exact wording of any button or link used to decline an add-on or offer.\n4. Continue to checkout as a guest. If an ordinary address form appears, fill it with name \"Audit Shopper\", email \"audit.shopper@example.com\", phone \"9000000000\", address \"OJone, Marathahalli, Bengaluru\", pincode 560037, and continue. If checkout instead opens a phone, OTP, or login step, do not submit anything: record the order summary visible on that screen and stop. Also stop at the first screen that asks for payment, or at a captcha.\n5. List every charge added on top of the product price in the order summary (delivery, shipping, handling, COD, platform, convenience, packaging, gift wrap, tax added separately) with its amount in rupees and the first step where it appeared. Do not list MRP, discounts, the subtotal, or charges shown as free or ₹0. Record the final payable amount.\n\nRecord urgency text from every step, with the step where you saw it. If something is not on the page, leave it empty or null. Do not guess or calculate amounts that are not shown.",
+  "started_at": "2026-10-17T08:56:33.362Z",
+  "finished_at": "2026-10-17T09:01:41.592Z",
+  "elapsed_seconds": 308,
+  "status": "COMPLETED",
+  "streaming_url": "https://ip-54-215-239-208.tetra-data.production.tinyfish.io/tf-c66cae68-ceb6-49e3-a65f-616acb9b4850/stream/0",
+  "progress": [
+    "Visit the rose lip care product page",
+    "Extract product details from rose lip care page",
+    "Select the 5g variant for rose lip care",
+    "Input pincode for delivery check",
+    "Enter pincode 560037 for delivery check",
+    "Check pincode delivery availability",
+    "Extract exact product details and fees",
+    "Add rose lip care to bag",
+    "Open the cart/bag to see items",
+    "Navigate to full cart page",
+    "Visit full cart page to see items",
+    "See cart page layout and details",
+    "Click promotional card to see content",
+    "Extract detailed cart page content",
+    "Proceed to checkout as guest",
+    "Click checkout button to proceed to checkout",
+    "Close region popup to proceed to checkout",
+    "Check current cart page state",
+    "Check for checkout button after popup dismissed",
+    "Revisit product page to add item to cart again",
+    "Go to full cart page",
+    "Dismiss marketing popup",
+    "Go to full cart page to see items",
+    "Confirm cart is empty and check product details",
+    "Revisit product page to add item to cart",
+    "Add Rose Lip Care to bag",
+    "Click VIEW BAG link to go to cart",
+    "Navigate to full cart page",
+    "See cart contents in mini popup",
+    "Navigate to full cart page",
+    "Go to full cart page directly",
+    "See full cart page layout",
+    "Click checkout button to proceed",
+    "Click apply offers",
+    "See full cart page with apply offers expanded",
+    "Find checkout button on cart page",
+    "Find checkout button ID",
+    "Collapse apply offers section",
+    "Find checkout button URL",
+    "Navigate to checkout page directly",
+    "Click mobile number field to focus",
+    "Enter phone number 9000000000",
+    "Click email field to focus",
+    "Enter audit email address",
+    "Click first name field to focus",
+    "Enter first name Audit",
+    "Enter last name Shopper",
+    "Enter pincode 560037",
+    "Click address field to focus",
+    "Enter address OJone, Marathahalli, Bengaluru",
+    "Click proceed to payment to continue checkout",
+    "See payment page order summary",
+    "Extract full order summary from payment page",
+    "Submit final findings for Kama Ayurveda audit task"
+  ],
+  "result": {
+    "store_name": "Kama Ayurveda",
+    "product_name": "Rose Lip Care",
+    "product_url": "https://www.kamaayurveda.com/in/rose-lip-care.html",
+    "listed_price_inr": 895,
+    "struck_price_inr": null,
+    "charges_mentioned_on_product_page": [
+      "Free Delivery Available",
+      "Order before 2 PM for Delivery by 24 Oct",
+      "Guaranteed Shipping Within 24 hours"
+    ],
+    "urgency_claims": [],
+    "cart_items": [
+      {
+        "name": "Rose Lip Care",
+        "price_inr": 895,
+        "added_by_shopper": true
+      },
+      {
+        "name": "Kumkumadi Sampling Bundle Bag",
+        "price_inr": 0,
+        "added_by_shopper": false
+      }
+    ],
+    "preselected_options": [
+      {
+        "label": "Size: 5 g",
+        "price_inr": 0,
+        "stage": "product"
+      },
+      {
+        "label": "Kumkumadi Sampling Bundle Bag (FREE)",
+        "price_inr": 0,
+        "stage": "product"
+      }
+    ],
+    "decline_wording": [],
+    "fee_lines": [
+      {
+        "label": "Shipping Charges",
+        "amount_inr": 0,
+        "first_seen_stage": "cart"
+      }
+    ],
+    "final_payable_inr": 895,
+    "furthest_stage": "payment",
+    "blocked_by": "none",
+    "notes": "No urgency text (countdown, low stock, viewers) found on any page. Cart showed a free Kumkumadi Sampling Bundle Bag added automatically (not by shopper) with ₹1.00 subtotal in order summary but shown as FREE on cart page. The product page mentions 'Free Delivery Available' and 'Order before 2 PM for Delivery by 24 Oct' and 'Guaranteed Shipping Within 24 hours' as delivery conditions. EMI option shown: 3 Monthly Payments of ₹298 via Snapmint. Payment page shows PayU, Razorpay, PhonePe, Paytm, Snapmint EMI, and Cash On Delivery as payment options."
+  },
+  "error": null
+}

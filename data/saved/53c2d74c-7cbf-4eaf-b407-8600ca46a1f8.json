@@ -1,0 +1,91 @@
+{
+  "run_id": "53c2d74c-7cbf-4eaf-b407-8600ca46a1f8",
+  "kind": "checkout",
+  "url": "https://www.bombayshavingcompany.com/products/derma-roller",
+  "goal": "You are a shopper in Bangalore recording exactly what this store shows a customer. Report facts only, never opinions.\nNever pay, never enter card or UPI details, never create an account, and never submit a phone number or email to a screen that sends an OTP or a login code.\n\n1. On this product page, record the product name, the price shown, any struck-through price, every fee, charge, or delivery condition mentioned on this page (delivery, shipping, handling, COD, platform, convenience, free-delivery thresholds), and any urgency text such as a countdown timer with its remaining time, 'only N left', or 'N people viewing'.\n2. If the page asks for a pincode or delivery location, enter 560037. If a size or variant must be chosen, pick the first one in stock. Add exactly one unit to the cart.\n3. Open the cart. List every line item and whether the shopper added it. List every option that is already selected or ticked without the shopper choosing it and that adds a product, a charge, or a consent: insurance, a donation, a membership, a tip, gift wrap, a protection plan, or marketing, SMS, or WhatsApp consent. Do not list badges, labels, or payment-method icons. Copy the exact wording of any button or link used to decline an add-on or offer.\n4. Continue to checkout as a guest. If an ordinary address form appears, fill it with name \"Audit Shopper\", email \"audit.shopper@example.com\", phone \"9000000000\", address \"OJone, Marathahalli, Bengaluru\", pincode 560037, and continue. If checkout instead opens a phone, OTP, or login step, do not submit anything: record the order summary visible on that screen and stop. Also stop at the first screen that asks for payment, or at a captcha.\n5. List every charge added on top of the product price in the order summary (delivery, shipping, handling, COD, platform, convenience, packaging, gift wrap, tax added separately) with its amount in rupees and the first step where it appeared. Do not list MRP, discounts, the subtotal, or charges shown as free or ₹0. Record the final payable amount.\n\nRecord urgency text from every step, with the step where you saw it. If something is not on the page, leave it empty or null. Do not guess or calculate amounts that are not shown.",
+  "started_at": "2026-10-17T08:44:26.339Z",
+  "finished_at": "2026-10-17T08:46:44.053Z",
+  "elapsed_seconds": 138,
+  "status": "COMPLETED",
+  "streaming_url": "https://ip-18-145-29-158.tetra-data.production.tinyfish.io/tf-5bddf743-ca22-46ed-9e74-47d6c9ed467d/stream/0",
+  "progress": [
+    "Visit the derma roller product page",
+    "Extract product details, price, fees, and urgency claims",
+    "Enter pincode 560037 for delivery location",
+    "Check current page state after pincode input attempt",
+    "Enter pincode 560037 for delivery",
+    "Reload the product page to get fresh elements",
+    "Enter pincode 560037 for delivery",
+    "Check current page and pincode input visibility",
+    "Extract all pricing and fee details",
+    "Add Derma Roller to cart",
+    "Open cart drawer fully",
+    "Examine cart drawer contents in detail",
+    "Proceed to checkout",
+    "Wait for checkout page to load",
+    "Examine checkout page in detail",
+    "Extract exact checkout page text",
+    "Get exact details of checkout screen",
+    "Check checkbox state and decline options on checkout",
+    "Check for decline wording in upsell sections",
+    "Submit complete findings for Derma Roller product audit"
+  ],
+  "result": {
+    "store_name": "Bombay Shaving Company",
+    "product_name": "Derma Roller",
+    "product_url": "https://www.bombayshavingcompany.com/products/derma-roller",
+    "listed_price_inr": 199,
+    "struck_price_inr": 399,
+    "charges_mentioned_on_product_page": [
+      "Free shipping on orders over ₹499",
+      "Price is inclusive of all taxes"
+    ],
+    "urgency_claims": [
+      {
+        "text": "2,589 Orders In Last 7 Days",
+        "kind": "other",
+        "seconds_remaining": null,
+        "stage": "product"
+      },
+      {
+        "text": "18 Hour Sale is Live",
+        "kind": "other",
+        "seconds_remaining": null,
+        "stage": "product"
+      },
+      {
+        "text": "You're ₹300 away from FREE SHIPPING",
+        "kind": "other",
+        "seconds_remaining": null,
+        "stage": "cart"
+      },
+      {
+        "text": "Selling fast — grab yours before they are gone!",
+        "kind": "other",
+        "seconds_remaining": 545,
+        "stage": "cart"
+      },
+      {
+        "text": "10 Hour 6 Minutes (timer shown at product page, countdown)",
+        "kind": "countdown",
+        "seconds_remaining": 546,
+        "stage": "product"
+      }
+    ],
+    "cart_items": [
+      {
+        "name": "Derma Roller",
+        "price_inr": 199,
+        "added_by_shopper": true
+      }
+    ],
+    "preselected_options": [],
+    "decline_wording": [],
+    "fee_lines": [],
+    "final_payable_inr": 199,
+    "furthest_stage": "checkout",
+    "blocked_by": "otp",
+    "notes": "The checkout screen (via Gokwik) asked for a phone number to login and would likely require OTP next. An order summary was visible: 1 item (Derma Roller) at ₹199, with coupon code field (6 coupons available), and a checkbox 'Send me order updates & offers - (no spam)' which was unchecked. Estimated total: ₹199. MRP shown as ₹399 (50% off)."
+  },
+  "error": null
+}

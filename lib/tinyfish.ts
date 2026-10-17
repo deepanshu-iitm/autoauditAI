@@ -60,6 +60,13 @@ export async function startRunStream(body: RunRequest, signal?: AbortSignal) {
   return response.body;
 }
 
+export async function cancelRun(runId: string) {
+  await fetch(`${AGENT_BASE}/v1/runs/${runId}/cancel`, {
+    method: "POST",
+    headers: { "X-API-Key": apiKey() },
+  }).catch(() => undefined);
+}
+
 export async function* readEvents(stream: ReadableStream<Uint8Array>) {
   const reader = stream.getReader();
   const decoder = new TextDecoder();

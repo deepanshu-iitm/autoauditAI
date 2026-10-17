@@ -16,12 +16,9 @@ type StreamEvent = {
 
 type Status = "idle" | "running" | "done" | "failed";
 
-const DEFAULT_URL = "https://scrapeme.live/shop";
-const DEFAULT_GOAL = "Open the first product. Return its name and the price shown, as JSON.";
-
 export default function AuditPage() {
-  const [url, setUrl] = useState(DEFAULT_URL);
-  const [goal, setGoal] = useState(DEFAULT_GOAL);
+  const [url, setUrl] = useState("");
+  const [goal, setGoal] = useState("");
   const [status, setStatus] = useState<Status>("idle");
   const [runId, setRunId] = useState<string | null>(null);
   const [streamingUrl, setStreamingUrl] = useState<string | null>(null);
@@ -52,7 +49,7 @@ export default function AuditPage() {
       const response = await fetch("/api/audit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ url, goal }),
+        body: JSON.stringify({ url, goal: goal.trim() || undefined }),
         signal: controller.signal,
       });
 
@@ -123,21 +120,22 @@ export default function AuditPage() {
 
       <form onSubmit={runAudit} className="mt-10 grid gap-4 lg:grid-cols-[1fr_1.4fr_auto]">
         <label className="block">
-          <span className="text-xs text-stone">Page URL</span>
+          <span className="text-xs text-stone">Product page URL</span>
           <input
             value={url}
             onChange={(event) => setUrl(event.target.value)}
+            placeholder="https://store.example/products/item"
             className="mt-1 w-full border border-ink/15 bg-white/60 px-3 py-2.5 text-sm outline-none focus:border-clay"
             required
           />
         </label>
         <label className="block">
-          <span className="text-xs text-stone">Goal</span>
+          <span className="text-xs text-stone">Custom goal (leave empty for a checkout audit)</span>
           <input
             value={goal}
             onChange={(event) => setGoal(event.target.value)}
+            placeholder="Checkout audit"
             className="mt-1 w-full border border-ink/15 bg-white/60 px-3 py-2.5 text-sm outline-none focus:border-clay"
-            required
           />
         </label>
         <button

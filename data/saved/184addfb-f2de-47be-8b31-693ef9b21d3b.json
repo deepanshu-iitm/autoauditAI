@@ -1,0 +1,87 @@
+{
+  "run_id": "184addfb-f2de-47be-8b31-693ef9b21d3b",
+  "kind": "checkout",
+  "url": "https://www.beardo.in/products/de-tan-aha-bha-roll-on",
+  "goal": "You are a shopper in Bangalore recording exactly what this store shows a customer. Report facts only, never opinions.\nNever pay, never enter card or UPI details, never create an account, never request an OTP.\n\n1. On this product page, record the product name, the price shown, any struck-through price, every fee or charge mentioned on this page (delivery, handling, COD, platform, convenience), and any urgency text such as a countdown timer with its remaining time, 'only N left', or 'N people viewing'.\n2. If the page asks for a pincode or delivery location, enter 560037. If a size or variant must be chosen, pick the first one in stock. Add exactly one unit to the cart.\n3. Open the cart. List every line item and whether the shopper added it. List every option that is already selected or ticked without the shopper choosing it, such as insurance, a donation, a membership, gift wrap, a protection plan, or marketing or WhatsApp consent, with its price. Copy the exact wording of any button or link used to decline an add-on.\n4. Continue to checkout as a guest. If it asks for details, use name \"Audit Shopper\", email \"audit.shopper@example.com\", phone \"9000000000\", address \"OJone, Marathahalli, Bengaluru\", pincode 560037. Stop at the first screen that asks for payment, or at any login, OTP, or captcha step.\n5. List every fee line in the order summary with its amount in rupees and the first step where it appeared. Record the final payable amount.\n\nIf something is not on the page, leave it empty or null. Do not guess or calculate amounts that are not shown.",
+  "started_at": "2026-10-17T08:39:00.813Z",
+  "finished_at": "2026-10-17T08:42:08.584Z",
+  "elapsed_seconds": 188,
+  "status": "COMPLETED",
+  "streaming_url": "https://ip-3-101-154-210.tetra-data.production.tinyfish.io/tf-212b7028-04fb-47e9-b654-55eb2e0f1107/stream/0",
+  "progress": [
+    "Visit product page for de-tan AHA BHA roll-on",
+    "Extract product page details",
+    "Enter pincode for delivery date check",
+    "Input pincode 560037 for delivery date check",
+    "Submit pincode to check delivery date",
+    "Check for variants and add to cart",
+    "Add exactly one unit of the product to cart",
+    "Extract cart drawer details",
+    "View price breakdown in cart",
+    "Extract price breakdown details",
+    "Check timer details in cart",
+    "Proceed to checkout from cart drawer",
+    "Enter phone number for guest checkout",
+    "Get exact price breakdown details",
+    "Extract all product page details before finishing",
+    "Capture OTP modal details",
+    "Check notification consent checkbox details",
+    "Submit complete findings"
+  ],
+  "result": {
+    "store_name": "Beardo India",
+    "product_name": "De-Tan AHA BHA Roll ON",
+    "product_url": "https://www.beardo.in/products/de-tan-aha-bha-roll-on",
+    "listed_price_inr": 299,
+    "struck_price_inr": 399,
+    "charges_mentioned_on_product_page": [
+      "Free Shipping on All Orders ₹399 & Above",
+      "COD Available",
+      "Inclusive of all taxes"
+    ],
+    "urgency_claims": [
+      {
+        "text": "1 item in your cart, Offer ends in 04 MINS 37 SECS",
+        "kind": "countdown",
+        "seconds_remaining": 277
+      }
+    ],
+    "cart_items": [
+      {
+        "name": "De-Tan AHA BHA Roll ON",
+        "price_inr": 299,
+        "added_by_shopper": true
+      }
+    ],
+    "preselected_options": [
+      {
+        "label": "100% Secured Payment",
+        "price_inr": 0,
+        "stage": "checkout"
+      }
+    ],
+    "decline_wording": [],
+    "fee_lines": [
+      {
+        "label": "Shipping Fee",
+        "amount_inr": 0,
+        "first_seen_stage": "cart"
+      },
+      {
+        "label": "Total MRP",
+        "amount_inr": 399,
+        "first_seen_stage": "cart"
+      },
+      {
+        "label": "Discount On MRP",
+        "amount_inr": -100,
+        "first_seen_stage": "cart"
+      }
+    ],
+    "final_payable_inr": 299,
+    "furthest_stage": "payment",
+    "blocked_by": "otp",
+    "notes": "Product page showed 'Inclusive of all taxes', 'Free Delivery', and 'COD Available'. A countdown timer bar showed 'Offer ends in 04 MINS' in cart. After clicking Checkout, a GoKwik modal appeared requesting a phone number. After entering 9000000000, an OTP verification screen was displayed (4 OTP input boxes). The task was blocked at the OTP stage as no OTP can be provided. Cart had no add-ons, pre-selected options, or decline wording beyond the shipping info note (₹49 for prepaid ₹79–398.99, free above ₹399)."
+  },
+  "error": null
+}
