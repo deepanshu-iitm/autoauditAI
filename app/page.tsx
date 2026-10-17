@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const steps = [
   {
     index: "01",
@@ -70,12 +72,34 @@ export default function HomePage() {
       <aside className="relative flex min-h-[72vh] items-center overflow-hidden bg-night px-8 py-14 text-paper sm:px-12 lg:min-h-screen">
         <div className="pointer-events-none absolute -right-16 -top-16 h-72 w-72 rounded-full bg-clay/45 blur-3xl" />
         <div className="relative w-full max-w-md">
-          <p className="text-[11px] uppercase tracking-[0.22em] text-paper/45">How it works</p>
+          <form action="/audit" className="border border-clay/40 bg-paper/[0.06] p-6 backdrop-blur-sm">
+            <label htmlFor="url" className="text-[11px] uppercase tracking-[0.22em] text-paper/60">
+              Audit a store
+            </label>
+            <input
+              id="url"
+              name="url"
+              type="url"
+              required
+              placeholder="Paste a product page URL"
+              className="mt-4 w-full border border-paper/15 bg-night/60 px-4 py-3 text-sm text-paper outline-none placeholder:text-paper/35 focus:border-clay"
+            />
+            <div className="mt-4 flex items-center justify-between gap-4">
+              <button type="submit" className="bg-clay px-6 py-3 text-sm font-medium text-paper transition-opacity hover:opacity-90">
+                Run audit
+              </button>
+              <Link href="/compare" className="text-sm text-paper/60 transition-colors hover:text-paper">
+                Compare stores →
+              </Link>
+            </div>
+          </form>
+
+          <p className="mt-10 text-[11px] uppercase tracking-[0.22em] text-paper/45">How it works</p>
           <ol className="mt-6 space-y-4">
             {steps.map((step) => (
               <li
                 key={step.index}
-                className="border border-paper/10 bg-paper/[0.04] p-6 backdrop-blur-sm transition-colors hover:border-clay/50"
+                className="border border-paper/10 bg-paper/[0.04] p-5 backdrop-blur-sm transition-colors hover:border-clay/50"
               >
                 <div className="flex items-baseline justify-between">
                   <p className="font-medium">{step.title}</p>
