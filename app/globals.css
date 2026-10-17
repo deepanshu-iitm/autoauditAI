@@ -6,3 +6,29 @@ body {
   background: #f3f0e8;
   color: #141311;
 }
+
+::selection {
+  background: #c4562a;
+  color: #f3f0e8;
+}
+
+@media print {
+  @page {
+    margin: 14mm;
+  }
+
+  body {
+    background: #fff;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  article,
+  section {
+    break-inside: avoid;
+  }
+}

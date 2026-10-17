@@ -7,7 +7,7 @@ export function checkoutGoal(pincode: string = AUDIT_PINCODE) {
     "You are a shopper in Bangalore recording exactly what this store shows a customer. Report facts only, never opinions.",
     "Never pay, never enter card or UPI details, never create an account, and never submit a phone number or email to a screen that sends an OTP or a login code.",
     "",
-    "1. On this product page, record the product name, the price shown, any struck-through price, every fee, charge, or delivery condition mentioned on this page (delivery, shipping, handling, COD, platform, convenience, free-delivery thresholds), and any urgency text such as a countdown timer with its remaining time, 'only N left', or 'N people viewing'.",
+    "1. On this product page, before adding anything to the cart, record the product name, the price shown, any struck-through price, and any urgency text such as a countdown timer with its remaining time, 'only N left', or 'N people viewing'. In charges_mentioned_on_product_page, copy only the fee, charge, or delivery-condition text that is visible on the product page itself (delivery, shipping, handling, COD, platform, convenience, free-delivery thresholds). Never copy text from the cart, a cart drawer, or checkout into this field.",
     `2. If the page asks for a pincode or delivery location, enter ${pincode}. If a size or variant must be chosen, pick the first one in stock. Add exactly one unit to the cart.`,
     "3. Open the cart. List every line item and whether the shopper added it. List every option that is already selected or ticked without the shopper choosing it and that adds a product, a charge, or a consent: insurance, a donation, a membership, a tip, gift wrap, a protection plan, or marketing, SMS, or WhatsApp consent. Do not list badges, labels, or payment-method icons. Copy the exact wording of any button or link used to decline an add-on or offer.",
     `4. Continue to checkout as a guest. If an ordinary address form appears, fill it with name "Audit Shopper", email "audit.shopper@example.com", phone "9000000000", address "OJone, Marathahalli, Bengaluru", pincode ${pincode}, and continue. If checkout instead opens a phone, OTP, or login step, do not submit anything: record the order summary visible on that screen and stop. Also stop at the first screen that asks for payment, or at a captcha.`,
@@ -18,6 +18,34 @@ export function checkoutGoal(pincode: string = AUDIT_PINCODE) {
 }
 
 const stageEnum = { type: "string", enum: STAGES };
+
+export function recheckGoal() {
+  return [
+    "You are a first-time visitor. Report facts only. Never check out, never pay, never enter any personal details.",
+    "1. On this product page, record every countdown timer with its exact text and its remaining time converted to seconds.",
+    "2. Add exactly one unit to the cart and open the cart or cart drawer. Record every countdown timer there in the same way.",
+    "Stop after reading the cart. If there is no countdown, return an empty list.",
+  ].join("\n");
+}
+
+export const recheckSchema = {
+  type: "object",
+  properties: {
+    countdowns: {
+      type: "array",
+      items: {
+        type: "object",
+        properties: {
+          text: { type: "string" },
+          seconds_remaining: { type: "integer", nullable: true },
+          stage: { type: "string", enum: ["product", "cart"] },
+        },
+        required: ["text", "stage"],
+      },
+    },
+  },
+  required: ["countdowns"],
+};
 
 export const observationSchema = {
   type: "object",

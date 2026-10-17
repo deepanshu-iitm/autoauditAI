@@ -60,6 +60,40 @@ export async function startRunStream(body: RunRequest, signal?: AbortSignal) {
   return response.body;
 }
 
+export type RunDetails = {
+  num_of_steps: number | null;
+  steps: { id: string; action: string; timestamp: string }[];
+};
+
+export async function getRun(runId: string): Promise<RunDetails> {
+  const response = await fetch(`${AGENT_BASE}/v1/runs/${runId}`, {
+    headers: { "X-API-Key": apiKey() },
+    cache: "no-store",
+  });
+  if (!response.ok) throw new TinyFishError(`TinyFish returned ${response.status}`, response.status);
+  const run = (await response.json()) as {
+    num_of_steps?: number | null;
+    steps?: { id: string; action?: string; timestamp?: string }[];
+  };
+  return {
+    num_of_steps: run.num_of_steps ?? null,
+    steps: (run.steps ?? []).map((step) => ({
+      id: step.id,
+      action: step.action ?? "",
+      timestamp: step.timestamp ?? "",
+    })),
+  };
+}
+
+export async function getScreenshot(runId: string, stepId: string) {
+  const response = await fetch(`${AGENT_BASE}/v1/runs/${runId}/steps/${stepId}/screenshot`, {
+    headers: { "X-API-Key": apiKey() },
+    cache: "no-store",
+  });
+  if (!response.ok) return null;
+  return Buffer.from(await response.arrayBuffer());
+}
+
 export async function cancelRun(runId: string) {
   await fetch(`${AGENT_BASE}/v1/runs/${runId}/cancel`, {
     method: "POST",
