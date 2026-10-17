@@ -1,0 +1,304 @@
+{
+  "run_id": "697ecbb0-1886-4759-aba2-9c4297552476",
+  "kind": "checkout",
+  "url": "https://www.forestessentialsindia.com/luxury-sugar-soap-panchpushp-125g.html",
+  "goal": "You are a shopper in Bangalore recording exactly what this store shows a customer. Report facts only, never opinions.\nNever pay, never enter card or UPI details, never create an account, and never submit a phone number or email to a screen that sends an OTP or a login code.\n\n1. On this product page, before adding anything to the cart, record the product name, the price shown, any struck-through price, and any urgency text such as a countdown timer with its remaining time, 'only N left', or 'N people viewing'. In charges_mentioned_on_product_page, copy only the fee, charge, or delivery-condition text that is visible on the product page itself (delivery, shipping, handling, COD, platform, convenience, free-delivery thresholds). Never copy text from the cart, a cart drawer, or checkout into this field.\n2. If the page asks for a pincode or delivery location, enter 560037. If a size or variant must be chosen, pick the first one in stock. Add exactly one unit to the cart.\n3. Open the cart. List every line item and whether the shopper added it. List every option that is already selected or ticked without the shopper choosing it and that adds a product, a charge, or a consent: insurance, a donation, a membership, a tip, gift wrap, a protection plan, or marketing, SMS, or WhatsApp consent. Do not list badges, labels, or payment-method icons. Copy the exact wording of any button or link used to decline an add-on or offer.\n4. Continue to checkout as a guest. If an ordinary address form appears, fill it with name \"Audit Shopper\", email \"audit.shopper@example.com\", phone \"9000000000\", address \"OJone, Marathahalli, Bengaluru\", pincode 560037, and continue. If checkout instead opens a phone, OTP, or login step, do not submit anything: record the order summary visible on that screen and stop. Also stop at the first screen that asks for payment, or at a captcha.\n5. List every charge added on top of the product price in the order summary (delivery, shipping, handling, COD, platform, convenience, packaging, gift wrap, tax added separately) with its amount in rupees and the first step where it appeared. Do not list MRP, discounts, the subtotal, or charges shown as free or ₹0. Record the final payable amount.\n\nRecord urgency text from every step, with the step where you saw it. If something is not on the page, leave it empty or null. Do not guess or calculate amounts that are not shown.",
+  "started_at": "2026-10-17T09:55:09.302Z",
+  "finished_at": "2026-10-17T09:58:58.135Z",
+  "elapsed_seconds": 229,
+  "status": "COMPLETED",
+  "streaming_url": "https://ip-18-144-177-171.tetra-data.production.tinyfish.io/tf-ebf59332-1919-4eb3-b041-1f5d0dfa0c0b/stream/0",
+  "progress": [
+    "Visit product page to collect shopping details",
+    "Extract product details and pricing",
+    "Visual check of product page details",
+    "Check for variant selector and urgency text",
+    "Extract charges and delivery info from product page",
+    "Enter pincode 560037",
+    "Enter pincode 560037",
+    "Verify delivery for pincode 560037",
+    "Check delivery charge info after pincode entry",
+    "Add product to cart",
+    "Check cart drawer contents and add-ons",
+    "Close cart drawer to navigate to full cart",
+    "Open cart by clicking bag icon",
+    "Navigate to full cart page",
+    "Extract cart details and charges",
+    "Visual check of cart page details",
+    "Proceed to checkout",
+    "Check checkout page content",
+    "Enter email for guest checkout",
+    "Decline Soundarya Club signup",
+    "Check current checkout form state",
+    "Submit email to proceed to shipping address form",
+    "Select prefix for name",
+    "Enter first name Audit",
+    "Enter last name Shopper",
+    "Enter street address",
+    "Enter pincode 560037",
+    "Enter city Bengaluru",
+    "Enter phone number 9000000000",
+    "Select shipping method",
+    "Proceed to payment step",
+    "Get exact order summary details at payment stage",
+    "Extract all charges and details from cart page",
+    "Go back to cart page",
+    "Get final order summary at payment page",
+    "Extract payment options and order summary",
+    "Navigate back to cart",
+    "Get final order summary and payment options",
+    "Recheck product page details for final compilation",
+    "Final report with all collected shopping data"
+  ],
+  "result": {
+    "store_name": "Forest Essentials",
+    "product_name": "Luxury Sugar Soap Panchpushp",
+    "product_url": "https://www.forestessentialsindia.com/luxury-sugar-soap-panchpushp-125g.html",
+    "listed_price_inr": 595,
+    "struck_price_inr": null,
+    "charges_mentioned_on_product_page": [
+      "FREE Delivery: 4-6 days on orders above Rs. 1000",
+      "MRP INCLUSIVE OF ALL TAXES",
+      "WE DELIVER ACROSS INDIA & INTERNATIONALLY.",
+      "Complimentary Tote Bag on ₹12,999+*",
+      "COMPLIMENTARY SAMPLES ABOVE ₹999!",
+      "10% Off Your First Order. Use FEWELCOME",
+      "No-Cost EMI from HDFC Bank on purchases of 7,500+"
+    ],
+    "urgency_claims": [],
+    "cart_items": [
+      {
+        "name": "Luxury Sugar Soap Panchpushp",
+        "price_inr": 595,
+        "added_by_shopper": true
+      }
+    ],
+    "preselected_options": [],
+    "decline_wording": [
+      {
+        "text": "NO THANKS",
+        "stage": "checkout"
+      }
+    ],
+    "fee_lines": [
+      {
+        "label": "Fixed Rate",
+        "amount_inr": 150,
+        "first_seen_stage": "cart"
+      }
+    ],
+    "final_payable_inr": 745,
+    "furthest_stage": "payment",
+    "blocked_by": "none",
+    "notes": "Stopped at payment screen with order summary visible. Shipping address was filled. 'Fixed Rate' delivery at ₹150 first appeared on cart page. Soundarya Club 'I'M INTERESTED' / 'NO THANKS' prompt appeared on checkout address step. No urgency text (countdown, low stock, viewers) found. No preselected add-ons, membership, gift wrap, or consent options that add charges. Payment options (Paytm, Payu) visible but no preselection."
+  },
+  "error": null,
+  "num_of_steps": 40,
+  "steps": [
+    {
+      "id": "b7d56f75-0e1c-4d61-b162-e189292008a1",
+      "action": "Visit product page to collect shopping details",
+      "timestamp": "2026-10-17T09:55:26Z"
+    },
+    {
+      "id": "f72db003-6932-485f-a3d1-7ff25593601f",
+      "action": "Extract product details and pricing",
+      "timestamp": "2026-10-17T09:55:31Z"
+    },
+    {
+      "id": "d4d16dce-6f86-4b7b-a82d-32f73f9d22a1",
+      "action": "Visual check of product page details",
+      "timestamp": "2026-10-17T09:55:36Z"
+    },
+    {
+      "id": "089e35cb-96fd-42be-8141-5ba050fcc37a",
+      "action": "Check for variant selector and urgency text",
+      "timestamp": "2026-10-17T09:55:40Z"
+    },
+    {
+      "id": "6ecc74a1-0370-425d-bf57-5cb682bf0abd",
+      "action": "Extract charges and delivery info from product page",
+      "timestamp": "2026-10-17T09:55:44Z"
+    },
+    {
+      "id": "49306b6e-0780-48d8-b667-f61e0376515e",
+      "action": "Enter pincode 560037",
+      "timestamp": "2026-10-17T09:55:48Z"
+    },
+    {
+      "id": "e8aaff01-c7a2-4a27-95ae-3247f091d2e5",
+      "action": "Enter pincode 560037",
+      "timestamp": "2026-10-17T09:55:51Z"
+    },
+    {
+      "id": "f13d836b-76de-4e02-9322-241315d58cab",
+      "action": "Verify delivery for pincode 560037",
+      "timestamp": "2026-10-17T09:55:54Z"
+    },
+    {
+      "id": "83876e68-6626-4bfa-a8bb-b8f292bbb04b",
+      "action": "Check delivery charge info after pincode entry",
+      "timestamp": "2026-10-17T09:56:01Z"
+    },
+    {
+      "id": "a28d8025-eb8a-43b2-ae52-c10daf78db00",
+      "action": "Add product to cart",
+      "timestamp": "2026-10-17T09:56:05Z"
+    },
+    {
+      "id": "b70742d3-bf38-49d9-8399-2fd41056d23a",
+      "action": "Check cart drawer contents and add-ons",
+      "timestamp": "2026-10-17T09:56:09Z"
+    },
+    {
+      "id": "776244b7-2a2c-45b9-93d2-05a84044c5a9",
+      "action": "Close cart drawer to navigate to full cart",
+      "timestamp": "2026-10-17T09:56:13Z"
+    },
+    {
+      "id": "236386a0-25f9-48c4-bd29-f158c45f6264",
+      "action": "Open cart by clicking bag icon",
+      "timestamp": "2026-10-17T09:56:16Z"
+    },
+    {
+      "id": "66a11b04-b3a0-49d1-926c-fe3f60d54a7c",
+      "action": "Navigate to full cart page",
+      "timestamp": "2026-10-17T09:56:20Z"
+    },
+    {
+      "id": "bba04360-a293-45eb-802d-d0838626a4e7",
+      "action": "Extract cart details and charges",
+      "timestamp": "2026-10-17T09:56:31Z"
+    },
+    {
+      "id": "3f8693e7-1261-476c-8a93-632af30c67e9",
+      "action": "Visual check of cart page details",
+      "timestamp": "2026-10-17T09:56:36Z"
+    },
+    {
+      "id": "92b48659-7b7e-4861-a80e-5c13b0aebcf9",
+      "action": "Proceed to checkout",
+      "timestamp": "2026-10-17T09:56:40Z"
+    },
+    {
+      "id": "4b10668d-b8a8-4a2f-9599-619fa8d7225f",
+      "action": "Check checkout page content",
+      "timestamp": "2026-10-17T09:56:47Z"
+    },
+    {
+      "id": "8818a0ae-e733-4fa2-a7d3-2358c78656d0",
+      "action": "Enter email for guest checkout",
+      "timestamp": "2026-10-17T09:56:52Z"
+    },
+    {
+      "id": "165d49ce-140f-40d0-b552-3ea76f9e8428",
+      "action": "Decline Soundarya Club signup",
+      "timestamp": "2026-10-17T09:56:57Z"
+    },
+    {
+      "id": "3d6594fc-14aa-48a3-a0d5-ed7dd7830831",
+      "action": "Check current checkout form state",
+      "timestamp": "2026-10-17T09:57:00Z"
+    },
+    {
+      "id": "0519e1b9-e5bb-4a88-b32e-4e13fdd37ccd",
+      "action": "Submit email to proceed to shipping address form",
+      "timestamp": "2026-10-17T09:57:07Z"
+    },
+    {
+      "id": "a58c304c-b395-42b3-a4e0-ad7161aca080",
+      "action": "Select prefix for name",
+      "timestamp": "2026-10-17T09:57:09Z"
+    },
+    {
+      "id": "619d9b76-233e-4988-9506-738ffebadcd2",
+      "action": "Enter first name Audit",
+      "timestamp": "2026-10-17T09:57:12Z"
+    },
+    {
+      "id": "35e1dd09-1c26-4566-b92f-3d47076aeb71",
+      "action": "Enter last name Shopper",
+      "timestamp": "2026-10-17T09:57:17Z"
+    },
+    {
+      "id": "57bb11a4-3dd9-46f2-af07-f88e5ae216cc",
+      "action": "Enter street address",
+      "timestamp": "2026-10-17T09:57:20Z"
+    },
+    {
+      "id": "22cdbc40-b4af-4b98-bb9e-bba8ae0eac56",
+      "action": "Enter pincode 560037",
+      "timestamp": "2026-10-17T09:57:23Z"
+    },
+    {
+      "id": "47f8f454-7ec5-4f64-b4bb-2569563f732a",
+      "action": "Enter city Bengaluru",
+      "timestamp": "2026-10-17T09:57:27Z"
+    },
+    {
+      "id": "827e8b5e-ba97-42e1-81a5-db4facac2109",
+      "action": "Enter phone number 9000000000",
+      "timestamp": "2026-10-17T09:57:31Z"
+    },
+    {
+      "id": "8dfb075e-5e17-4997-8fe3-3cd4b3927a1a",
+      "action": "Select shipping method",
+      "timestamp": "2026-10-17T09:57:34Z"
+    },
+    {
+      "id": "f95c864d-04a2-4ac7-8610-5d6df1e57d84",
+      "action": "Proceed to payment step",
+      "timestamp": "2026-10-17T09:57:36Z"
+    },
+    {
+      "id": "b586394d-ac19-4fc4-b541-4c6eabcfeef5",
+      "action": "Get exact order summary details at payment stage",
+      "timestamp": "2026-10-17T09:57:42Z"
+    },
+    {
+      "id": "2201ffdc-fc2f-4d49-8f8b-e7075ab8a11a",
+      "action": "Extract all charges and details from cart page",
+      "timestamp": "2026-10-17T09:57:46Z"
+    },
+    {
+      "id": "5ebbece8-6aee-4cee-9d45-ae676bc53c77",
+      "action": "Go back to cart page",
+      "timestamp": "2026-10-17T09:57:50Z"
+    },
+    {
+      "id": "53b39b41-e327-4c8b-96eb-9055ce7c0773",
+      "action": "Get final order summary at payment page",
+      "timestamp": "2026-10-17T09:57:55Z"
+    },
+    {
+      "id": "7851fbd9-98d2-4213-8b17-e4aaa1c0d6c6",
+      "action": "Extract payment options and order summary",
+      "timestamp": "2026-10-17T09:57:58Z"
+    },
+    {
+      "id": "02aef6ca-182e-4f0b-b9bd-27c788e9d1a3",
+      "action": "Navigate back to cart",
+      "timestamp": "2026-10-17T09:58:03Z"
+    },
+    {
+      "id": "47b0ffa4-759c-43a8-8fc1-dca402feda03",
+      "action": "Get final order summary and payment options",
+      "timestamp": "2026-10-17T09:58:08Z"
+    },
+    {
+      "id": "43bcc680-a135-4a18-b425-8034da6ba627",
+      "action": "Recheck product page details for final compilation",
+      "timestamp": "2026-10-17T09:58:14Z"
+    },
+    {
+      "id": "6030aeca-f038-4775-965d-33f7cd39e7a8",
+      "action": "Final report with all collected shopping data",
+      "timestamp": "2026-10-17T09:58:44Z"
+    },
+    {
+      "id": "ba1ba706-b34c-4ad4-841e-1f1054c05dcf",
+      "action": "Task completed",
+      "timestamp": "2026-10-17T09:58:58Z"
+    }
+  ]
+}

@@ -113,5 +113,283 @@
     "blocked_by": "none",
     "notes": "No urgency text (countdown, low stock, viewers) found on any page. Cart showed a free Kumkumadi Sampling Bundle Bag added automatically (not by shopper) with ₹1.00 subtotal in order summary but shown as FREE on cart page. The product page mentions 'Free Delivery Available' and 'Order before 2 PM for Delivery by 24 Oct' and 'Guaranteed Shipping Within 24 hours' as delivery conditions. EMI option shown: 3 Monthly Payments of ₹298 via Snapmint. Payment page shows PayU, Razorpay, PhonePe, Paytm, Snapmint EMI, and Cash On Delivery as payment options."
   },
-  "error": null
+  "error": null,
+  "steps": [
+    {
+      "id": "f3b860c2-2ff3-418a-a32a-36587358af13",
+      "action": "Visit the rose lip care product page",
+      "timestamp": "2026-10-17T08:56:42Z"
+    },
+    {
+      "id": "20a145ea-fc20-468e-964b-0203657f61d3",
+      "action": "Extract product details from rose lip care page",
+      "timestamp": "2026-10-17T08:56:50Z"
+    },
+    {
+      "id": "df7e1b58-a4a6-4175-b681-47579e247417",
+      "action": "Select the 5g variant for rose lip care",
+      "timestamp": "2026-10-17T08:56:54Z"
+    },
+    {
+      "id": "5017eb7a-279b-4f9c-b175-d2c9debd082e",
+      "action": "Input pincode for delivery check",
+      "timestamp": "2026-10-17T08:57:02Z"
+    },
+    {
+      "id": "ed0b6d63-a051-40bf-8607-94990f57dd64",
+      "action": "Enter pincode 560037 for delivery check",
+      "timestamp": "2026-10-17T08:57:07Z"
+    },
+    {
+      "id": "1e9c3dc8-2aa2-4978-bbab-8589a9963229",
+      "action": "Check pincode delivery availability",
+      "timestamp": "2026-10-17T08:57:10Z"
+    },
+    {
+      "id": "75923fac-a940-4e4f-8d57-0d0f18629060",
+      "action": "Extract exact product details and fees",
+      "timestamp": "2026-10-17T08:57:13Z"
+    },
+    {
+      "id": "d161a2c4-c841-419a-92c7-d7bf7aceeaa7",
+      "action": "Add rose lip care to bag",
+      "timestamp": "2026-10-17T08:57:17Z"
+    },
+    {
+      "id": "e535eb09-f560-4b94-b8a7-bc1fde5bf1c8",
+      "action": "Open the cart/bag to see items",
+      "timestamp": "2026-10-17T08:57:31Z"
+    },
+    {
+      "id": "25d4520e-7dbf-405e-8f08-79102a033f8d",
+      "action": "Navigate to full cart page",
+      "timestamp": "2026-10-17T08:57:38Z"
+    },
+    {
+      "id": "f796c103-5312-4611-9c60-61ecd9c4108f",
+      "action": "Visit full cart page to see items",
+      "timestamp": "2026-10-17T08:57:44Z"
+    },
+    {
+      "id": "f206de81-7197-476e-be35-ce760275ab66",
+      "action": "See cart page layout and details",
+      "timestamp": "2026-10-17T08:57:51Z"
+    },
+    {
+      "id": "7f4c3d3c-232e-4f5c-896a-3a8635ec5292",
+      "action": "Click promotional card to see content",
+      "timestamp": "2026-10-17T08:57:56Z"
+    },
+    {
+      "id": "4f241115-b725-491b-b229-337eff292f47",
+      "action": "Extract detailed cart page content",
+      "timestamp": "2026-10-17T08:58:00Z"
+    },
+    {
+      "id": "45fc1bfa-2525-4959-846f-93dca068a2de",
+      "action": "Proceed to checkout as guest",
+      "timestamp": "2026-10-17T08:58:04Z"
+    },
+    {
+      "id": "b48525ff-63cf-425c-9a6c-c5d649d13e33",
+      "action": "Click checkout button to proceed to checkout",
+      "timestamp": "2026-10-17T08:58:09Z"
+    },
+    {
+      "id": "738a6b95-3ab6-4fe8-81ba-60944e17282a",
+      "action": "Close region popup to proceed to checkout",
+      "timestamp": "2026-10-17T08:58:14Z"
+    },
+    {
+      "id": "7eff0f5b-73e9-4fdc-9d6b-2c2f12be86a2",
+      "action": "Check current cart page state",
+      "timestamp": "2026-10-17T08:58:17Z"
+    },
+    {
+      "id": "405adb63-6eea-49d6-b984-cffac9636ab9",
+      "action": "Check for checkout button after popup dismissed",
+      "timestamp": "2026-10-17T08:58:21Z"
+    },
+    {
+      "id": "35b5ab2e-1af5-4ef5-bad5-3d5a975a4fcb",
+      "action": "Revisit product page to add item to cart again",
+      "timestamp": "2026-10-17T08:58:24Z"
+    },
+    {
+      "id": "495b031a-2a33-49cb-a2fd-ca77194ca604",
+      "action": "Go to full cart page",
+      "timestamp": "2026-10-17T08:58:29Z"
+    },
+    {
+      "id": "b951cc22-3a16-43c3-99e8-2df21cd0dc11",
+      "action": "Dismiss marketing popup",
+      "timestamp": "2026-10-17T08:58:33Z"
+    },
+    {
+      "id": "847938d4-06c5-4af1-a49b-01d8680f882d",
+      "action": "Go to full cart page to see items",
+      "timestamp": "2026-10-17T08:58:36Z"
+    },
+    {
+      "id": "8777f501-035b-48a4-8e0f-5e7305b77d2e",
+      "action": "Confirm cart is empty and check product details",
+      "timestamp": "2026-10-17T08:58:40Z"
+    },
+    {
+      "id": "940ed0e8-1362-4679-8e90-4f5275dd4a4e",
+      "action": "Revisit product page to add item to cart",
+      "timestamp": "2026-10-17T08:58:44Z"
+    },
+    {
+      "id": "cf67230c-e5b7-4ebe-b5a1-4493b7b581c0",
+      "action": "Add Rose Lip Care to bag",
+      "timestamp": "2026-10-17T08:58:49Z"
+    },
+    {
+      "id": "bba6f824-e8da-4d14-b94b-6d8c5bc16d91",
+      "action": "Click VIEW BAG link to go to cart",
+      "timestamp": "2026-10-17T08:59:02Z"
+    },
+    {
+      "id": "26dd07b3-a12e-453c-9134-533499c31948",
+      "action": "Navigate to full cart page",
+      "timestamp": "2026-10-17T08:59:10Z"
+    },
+    {
+      "id": "0e2865e7-c901-42d6-aac1-2ef1423d0639",
+      "action": "See cart contents in mini popup",
+      "timestamp": "2026-10-17T08:59:15Z"
+    },
+    {
+      "id": "c38a0752-fd12-4320-8240-b2533b149fd8",
+      "action": "Navigate to full cart page",
+      "timestamp": "2026-10-17T08:59:20Z"
+    },
+    {
+      "id": "8b3886a4-184e-44c1-b655-8930b1fcc2f4",
+      "action": "Go to full cart page directly",
+      "timestamp": "2026-10-17T08:59:23Z"
+    },
+    {
+      "id": "48b265ca-07de-4b1b-a6ca-50ac6ef4dae1",
+      "action": "See full cart page layout",
+      "timestamp": "2026-10-17T08:59:30Z"
+    },
+    {
+      "id": "de2dcf5b-ac0e-428a-b567-3de8e65a6ce3",
+      "action": "Click checkout button to proceed",
+      "timestamp": "2026-10-17T08:59:35Z"
+    },
+    {
+      "id": "5a2d9897-ee56-4570-91d8-0a758e711ed1",
+      "action": "Click apply offers",
+      "timestamp": "2026-10-17T08:59:39Z"
+    },
+    {
+      "id": "1af422ca-d61b-4b0f-a1fb-0ea4411412b8",
+      "action": "See full cart page with apply offers expanded",
+      "timestamp": "2026-10-17T08:59:42Z"
+    },
+    {
+      "id": "576b391c-4569-4cf4-909a-221be404a21e",
+      "action": "Find checkout button on cart page",
+      "timestamp": "2026-10-17T08:59:47Z"
+    },
+    {
+      "id": "d847aeb7-fa5b-4f57-8cc3-4404cd50cf4e",
+      "action": "Find checkout button ID",
+      "timestamp": "2026-10-17T08:59:51Z"
+    },
+    {
+      "id": "d05642a3-f1ce-495c-aee4-04cb638e6660",
+      "action": "Collapse apply offers section",
+      "timestamp": "2026-10-17T08:59:55Z"
+    },
+    {
+      "id": "e6046744-d866-4584-8561-f10ad722c9c5",
+      "action": "Find checkout button URL",
+      "timestamp": "2026-10-17T08:59:59Z"
+    },
+    {
+      "id": "187fd591-d1e5-4889-8ff3-b7b90de15da9",
+      "action": "Navigate to checkout page directly",
+      "timestamp": "2026-10-17T09:00:07Z"
+    },
+    {
+      "id": "98674fe6-52fb-49a7-898b-bc03a0d2f5b8",
+      "action": "Click mobile number field to focus",
+      "timestamp": "2026-10-17T09:00:13Z"
+    },
+    {
+      "id": "96c03d4d-309c-42b4-9e07-06b8034c04ac",
+      "action": "Enter phone number 9000000000",
+      "timestamp": "2026-10-17T09:00:17Z"
+    },
+    {
+      "id": "39eab08d-27b6-41f7-8f75-a4d0865665c7",
+      "action": "Click email field to focus",
+      "timestamp": "2026-10-17T09:00:20Z"
+    },
+    {
+      "id": "0b8f020f-2304-4399-b669-762032b57901",
+      "action": "Enter audit email address",
+      "timestamp": "2026-10-17T09:00:24Z"
+    },
+    {
+      "id": "5dfcdb22-aca3-425c-b57b-b6a89ef468b9",
+      "action": "Click first name field to focus",
+      "timestamp": "2026-10-17T09:00:28Z"
+    },
+    {
+      "id": "dc16d0b9-972f-4070-90fa-c125c62a3fb2",
+      "action": "Enter first name Audit",
+      "timestamp": "2026-10-17T09:00:31Z"
+    },
+    {
+      "id": "b75af1ee-0771-4146-9390-31d806b851e3",
+      "action": "Enter last name Shopper",
+      "timestamp": "2026-10-17T09:00:34Z"
+    },
+    {
+      "id": "9d222ec1-46f2-4833-b0a8-7d8d287ce55c",
+      "action": "Enter pincode 560037",
+      "timestamp": "2026-10-17T09:00:37Z"
+    },
+    {
+      "id": "4f56068d-f389-40e7-9505-354e76c1e801",
+      "action": "Click address field to focus",
+      "timestamp": "2026-10-17T09:00:41Z"
+    },
+    {
+      "id": "269cc289-785b-4650-8642-3c229936b1e9",
+      "action": "Enter address OJone, Marathahalli, Bengaluru",
+      "timestamp": "2026-10-17T09:00:45Z"
+    },
+    {
+      "id": "126f8242-b563-4d81-96c8-e655fe148fcf",
+      "action": "Click proceed to payment to continue checkout",
+      "timestamp": "2026-10-17T09:00:48Z"
+    },
+    {
+      "id": "4fca6f6c-ae63-4736-a0b4-f1d6d9c13f99",
+      "action": "See payment page order summary",
+      "timestamp": "2026-10-17T09:00:53Z"
+    },
+    {
+      "id": "b744dc18-7c6f-45b1-849d-66118d03a854",
+      "action": "Extract full order summary from payment page",
+      "timestamp": "2026-10-17T09:00:59Z"
+    },
+    {
+      "id": "48cba396-0bf9-46c0-b448-4d0572970c3b",
+      "action": "Submit final findings for Kama Ayurveda audit task",
+      "timestamp": "2026-10-17T09:01:24Z"
+    },
+    {
+      "id": "faa0b419-0ebf-461f-b0a4-4c2e56e58be8",
+      "action": "Task completed",
+      "timestamp": "2026-10-17T09:01:42Z"
+    }
+  ],
+  "num_of_steps": 54
 }

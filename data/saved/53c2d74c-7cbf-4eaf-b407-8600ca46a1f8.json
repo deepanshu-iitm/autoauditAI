@@ -87,5 +87,113 @@
     "blocked_by": "otp",
     "notes": "The checkout screen (via Gokwik) asked for a phone number to login and would likely require OTP next. An order summary was visible: 1 item (Derma Roller) at ₹199, with coupon code field (6 coupons available), and a checkbox 'Send me order updates & offers - (no spam)' which was unchecked. Estimated total: ₹199. MRP shown as ₹399 (50% off)."
   },
-  "error": null
+  "error": null,
+  "steps": [
+    {
+      "id": "59af7fa2-d3e1-4ef1-9538-ddb82b7bebee",
+      "action": "Visit the derma roller product page",
+      "timestamp": "2026-10-17T08:44:33Z"
+    },
+    {
+      "id": "fde0bbe8-08fd-49ba-9bab-96f5f33942f8",
+      "action": "Extract product details, price, fees, and urgency claims",
+      "timestamp": "2026-10-17T08:44:46Z"
+    },
+    {
+      "id": "e48ce82e-69dc-4b4b-bf0a-93cade6a5cd3",
+      "action": "Enter pincode 560037 for delivery location",
+      "timestamp": "2026-10-17T08:44:51Z"
+    },
+    {
+      "id": "dba54173-74cf-4381-85a2-8757af9cd3f0",
+      "action": "Check current page state after pincode input attempt",
+      "timestamp": "2026-10-17T08:44:54Z"
+    },
+    {
+      "id": "55e6f46b-5f46-405c-a187-13aefdcc5c30",
+      "action": "Enter pincode 560037 for delivery",
+      "timestamp": "2026-10-17T08:44:58Z"
+    },
+    {
+      "id": "59f2d66c-d47f-43f5-8cc2-4298f77cfa8a",
+      "action": "Reload the product page to get fresh elements",
+      "timestamp": "2026-10-17T08:45:03Z"
+    },
+    {
+      "id": "dc062a80-9cb1-462e-8f69-9b5b1711813f",
+      "action": "Enter pincode 560037 for delivery",
+      "timestamp": "2026-10-17T08:45:11Z"
+    },
+    {
+      "id": "cce9de24-e329-40bf-97a2-342612dde6bc",
+      "action": "Check current page and pincode input visibility",
+      "timestamp": "2026-10-17T08:45:15Z"
+    },
+    {
+      "id": "32f63f32-6005-43a2-af33-7b51d8ff8cb9",
+      "action": "Extract all pricing and fee details",
+      "timestamp": "2026-10-17T08:45:21Z"
+    },
+    {
+      "id": "596cd193-3bbb-4aa1-bacc-e2a2a48859d7",
+      "action": "Add Derma Roller to cart",
+      "timestamp": "2026-10-17T08:45:27Z"
+    },
+    {
+      "id": "781ccc9f-fd56-4d44-b3d1-1c2ffeb48e60",
+      "action": "Open cart drawer fully",
+      "timestamp": "2026-10-17T08:45:31Z"
+    },
+    {
+      "id": "b2f264e8-e9f1-4a87-adde-ef91ef6a801a",
+      "action": "Examine cart drawer contents in detail",
+      "timestamp": "2026-10-17T08:45:35Z"
+    },
+    {
+      "id": "32dcfa90-ba70-49c7-9eb6-e97eb7fb1fe1",
+      "action": "Proceed to checkout",
+      "timestamp": "2026-10-17T08:45:39Z"
+    },
+    {
+      "id": "12ea7409-df9d-40ea-b4a1-7a9f46d23ab9",
+      "action": "Wait for checkout page to load",
+      "timestamp": "2026-10-17T08:45:42Z"
+    },
+    {
+      "id": "0953aa23-ad7c-4022-a1ce-cd26d77a4d4c",
+      "action": "Examine checkout page in detail",
+      "timestamp": "2026-10-17T08:45:49Z"
+    },
+    {
+      "id": "98dede6d-5db7-4a1d-b669-21126b71eee0",
+      "action": "Extract exact checkout page text",
+      "timestamp": "2026-10-17T08:45:55Z"
+    },
+    {
+      "id": "4bd37df5-6570-4560-ae53-0a5db79b7b33",
+      "action": "Get exact details of checkout screen",
+      "timestamp": "2026-10-17T08:46:01Z"
+    },
+    {
+      "id": "d077d264-9f77-464b-ab73-38a7539ea5f2",
+      "action": "Check checkbox state and decline options on checkout",
+      "timestamp": "2026-10-17T08:46:09Z"
+    },
+    {
+      "id": "4b580a4f-06b5-4e7f-bec8-2ceab86d5e84",
+      "action": "Check for decline wording in upsell sections",
+      "timestamp": "2026-10-17T08:46:15Z"
+    },
+    {
+      "id": "f8663bd9-248a-4459-8a79-715564ca7e32",
+      "action": "Submit complete findings for Derma Roller product audit",
+      "timestamp": "2026-10-17T08:46:37Z"
+    },
+    {
+      "id": "d490182d-d787-46b0-b5f6-229739e6cca9",
+      "action": "Task completed",
+      "timestamp": "2026-10-17T08:46:44Z"
+    }
+  ],
+  "num_of_steps": 20
 }

@@ -64,5 +64,133 @@
     "blocked_by": "otp",
     "notes": "The checkout flow redirected to a Shiprocket-powered checkout page which requires a mobile number (10-digit input with +91 country code) before showing a full address form. Per the instructions, when checkout opens a phone/OTP step, we record the order summary visible on that screen and stop. The order summary showed: 1 item (Guldasta Lentil Bowl | Haveli Socials) at Rs.299.00, with no additional charges (delivery, shipping, handling, COD, platform, convenience, tax, gift wrap, etc.) listed separately. No pre-selected add-ons (insurance, donation, membership, tip, gift wrap, protection plan, marketing/SMS/WhatsApp consent) were present in the mini cart or on the checkout screen. No urgency text (countdown timer, low stock, people viewing) was present. The pincode 560037 was entered on the product page and delivery was confirmed for Bangalore, Karnataka with estimated delivery by 31 October."
   },
-  "error": null
+  "error": null,
+  "steps": [
+    {
+      "id": "27318eab-cf65-4123-950a-6abff2e88844",
+      "action": "Visit product page to gather initial information",
+      "timestamp": "2026-10-17T08:44:24Z"
+    },
+    {
+      "id": "cb53117b-1355-488c-83d2-6f42b807a567",
+      "action": "Extract product details from product page",
+      "timestamp": "2026-10-17T08:44:41Z"
+    },
+    {
+      "id": "072815aa-c3ee-4039-af3d-d234d87c4197",
+      "action": "Extract detailed pricing and fee information",
+      "timestamp": "2026-10-17T08:44:47Z"
+    },
+    {
+      "id": "45ff4cd2-2860-462f-9ceb-ad92a9701df7",
+      "action": "Get visual details of product page",
+      "timestamp": "2026-10-17T08:44:55Z"
+    },
+    {
+      "id": "3d1cfc6f-b8c5-445b-97a7-98a9dcd9d3f7",
+      "action": "Get precise product page details",
+      "timestamp": "2026-10-17T08:45:03Z"
+    },
+    {
+      "id": "9bf37bf4-a454-48a4-885e-acde20ca24cc",
+      "action": "Check for pincode input and product variants",
+      "timestamp": "2026-10-17T08:45:07Z"
+    },
+    {
+      "id": "844ee90f-e945-42a7-8515-ad2727cbd451",
+      "action": "Get detailed visual info about product page elements",
+      "timestamp": "2026-10-17T08:45:12Z"
+    },
+    {
+      "id": "97731786-4e34-4968-b0d9-cf96d5ab8d84",
+      "action": "Enter pincode 560037 for delivery check",
+      "timestamp": "2026-10-17T08:45:16Z"
+    },
+    {
+      "id": "c7b7e999-915c-4724-9f0e-d5bcb413be13",
+      "action": "Submit pincode 560037 for delivery check",
+      "timestamp": "2026-10-17T08:45:19Z"
+    },
+    {
+      "id": "cef40d65-7ac7-4eb8-a6f6-448edee79385",
+      "action": "Find add to cart button and any variants",
+      "timestamp": "2026-10-17T08:45:23Z"
+    },
+    {
+      "id": "16d848c2-f443-4996-9437-ba0b140313c6",
+      "action": "Add product to cart",
+      "timestamp": "2026-10-17T08:45:28Z"
+    },
+    {
+      "id": "cfcaed98-d3f6-4a03-98e6-cf68dadd71f6",
+      "action": "Check mini cart contents and any add-ons",
+      "timestamp": "2026-10-17T08:45:35Z"
+    },
+    {
+      "id": "d814e071-93fd-4572-9de4-55fac0c44ccc",
+      "action": "Proceed to checkout from mini cart",
+      "timestamp": "2026-10-17T08:45:39Z"
+    },
+    {
+      "id": "8b6affe5-389e-402c-85d2-e9d3f9f99977",
+      "action": "Check if mini cart is still visible",
+      "timestamp": "2026-10-17T08:45:43Z"
+    },
+    {
+      "id": "b7f1d1c3-5017-4954-b569-2ae63d911d39",
+      "action": "Click Buy Now to go to checkout",
+      "timestamp": "2026-10-17T08:45:49Z"
+    },
+    {
+      "id": "0837c028-f581-457a-8247-faf52158be1b",
+      "action": "Check current page state for checkout options",
+      "timestamp": "2026-10-17T08:45:54Z"
+    },
+    {
+      "id": "7e1f3ecf-17cc-4ea0-bdc8-811b048970d9",
+      "action": "Find checkout button element",
+      "timestamp": "2026-10-17T08:45:59Z"
+    },
+    {
+      "id": "327becfb-5b30-4351-908e-cd7f6ff206c1",
+      "action": "Click Buy Now to proceed to checkout",
+      "timestamp": "2026-10-17T08:46:04Z"
+    },
+    {
+      "id": "6769c5c4-60b9-4c39-a929-f23bb2b5ee93",
+      "action": "Click BUY NOW via headless button",
+      "timestamp": "2026-10-17T08:46:09Z"
+    },
+    {
+      "id": "113f15de-4784-49e8-9775-e33074297584",
+      "action": "Check checkout screen details",
+      "timestamp": "2026-10-17T08:46:16Z"
+    },
+    {
+      "id": "a0c501a4-065e-451c-9a5d-38277987f61e",
+      "action": "Get exact checkout screen details",
+      "timestamp": "2026-10-17T08:46:20Z"
+    },
+    {
+      "id": "ae5cd2fc-238d-4d9d-b63d-a0dd320c3d7a",
+      "action": "Compile all findings for final report",
+      "timestamp": "2026-10-17T08:46:26Z"
+    },
+    {
+      "id": "673b855c-ad7f-4792-af51-773be8d683f9",
+      "action": "Final capture of checkout screen before stopping",
+      "timestamp": "2026-10-17T08:46:33Z"
+    },
+    {
+      "id": "35d73db2-b7bc-4a2f-a494-2d013a836d24",
+      "action": "Final report with all findings",
+      "timestamp": "2026-10-17T08:47:04Z"
+    },
+    {
+      "id": "46cffbe8-dfc0-4858-836b-66b78d74909e",
+      "action": "Task completed",
+      "timestamp": "2026-10-17T08:47:13Z"
+    }
+  ],
+  "num_of_steps": 24
 }

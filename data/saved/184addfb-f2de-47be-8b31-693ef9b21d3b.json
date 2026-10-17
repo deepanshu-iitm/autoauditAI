@@ -83,5 +83,117 @@
     "blocked_by": "otp",
     "notes": "Product page showed 'Inclusive of all taxes', 'Free Delivery', and 'COD Available'. A countdown timer bar showed 'Offer ends in 04 MINS' in cart. After clicking Checkout, a GoKwik modal appeared requesting a phone number. After entering 9000000000, an OTP verification screen was displayed (4 OTP input boxes). The task was blocked at the OTP stage as no OTP can be provided. Cart had no add-ons, pre-selected options, or decline wording beyond the shipping info note (₹49 for prepaid ₹79–398.99, free above ₹399)."
   },
-  "error": null
+  "error": null,
+  "steps": [
+    {
+      "id": "3035f14e-7965-4621-af2c-448bb2c98afa",
+      "action": "Visit product page for de-tan AHA BHA roll-on",
+      "timestamp": "2026-10-17T08:39:08Z"
+    },
+    {
+      "id": "db0c64af-cef6-4d35-9acf-7cffde33b06b",
+      "action": "Extract product page details",
+      "timestamp": "2026-10-17T08:39:21Z"
+    },
+    {
+      "id": "12bdd66d-b286-4223-94cf-f767f5b7303f",
+      "action": "Enter pincode for delivery date check",
+      "timestamp": "2026-10-17T08:39:26Z"
+    },
+    {
+      "id": "7af73dfa-9374-494b-b393-febfd076297a",
+      "action": "Input pincode 560037 for delivery date check",
+      "timestamp": "2026-10-17T08:39:31Z"
+    },
+    {
+      "id": "9eecc374-f934-41a9-8047-2e34902b7700",
+      "action": "Submit pincode to check delivery date",
+      "timestamp": "2026-10-17T08:39:36Z"
+    },
+    {
+      "id": "c994019b-8168-4581-b021-b4f91005d604",
+      "action": "Check for variants and add to cart",
+      "timestamp": "2026-10-17T08:39:40Z"
+    },
+    {
+      "id": "c8472336-a4b0-446a-bdc9-ebfc89829ad7",
+      "action": "Add exactly one unit of the product to cart",
+      "timestamp": "2026-10-17T08:39:45Z"
+    },
+    {
+      "id": "75e39522-5098-4ab0-a465-5d379d448ae7",
+      "action": "Extract cart drawer details",
+      "timestamp": "2026-10-17T08:39:55Z"
+    },
+    {
+      "id": "c8854552-c0de-4c51-9448-7a62cf09a285",
+      "action": "View price breakdown in cart",
+      "timestamp": "2026-10-17T08:40:00Z"
+    },
+    {
+      "id": "e2062ce3-e2c0-49cc-b38c-f908b635361f",
+      "action": "Extract price breakdown details",
+      "timestamp": "2026-10-17T08:40:04Z"
+    },
+    {
+      "id": "15714ec2-a6a2-46a5-8548-be15e8469685",
+      "action": "Check timer details in cart",
+      "timestamp": "2026-10-17T08:40:09Z"
+    },
+    {
+      "id": "32ccc527-ec20-417a-be78-dbbc410ef891",
+      "action": "Proceed to checkout from cart drawer",
+      "timestamp": "2026-10-17T08:40:13Z"
+    },
+    {
+      "id": "04a0d38b-cab8-42be-870d-79c9235e84c7",
+      "action": "Enter phone number for guest checkout",
+      "timestamp": "2026-10-17T08:40:20Z"
+    },
+    {
+      "id": "52f0e49f-3759-4a0b-9b41-c755be9c4ae6",
+      "action": "Get exact price breakdown details",
+      "timestamp": "2026-10-17T08:41:07Z"
+    },
+    {
+      "id": "a7cc8f43-a106-49c8-a2e0-f03a04fc0cda",
+      "action": "Extract all product page details before finishing",
+      "timestamp": "2026-10-17T08:41:13Z"
+    },
+    {
+      "id": "2f2594db-cafd-4298-936e-6a8a482ff210",
+      "action": "Capture OTP modal details",
+      "timestamp": "2026-10-17T08:41:19Z"
+    },
+    {
+      "id": "13134cbc-7c3c-40e6-968f-0115e4c37272",
+      "action": "Check notification consent checkbox details",
+      "timestamp": "2026-10-17T08:41:23Z"
+    },
+    {
+      "id": "4def2f45-e704-4351-b555-5dcc0478836c",
+      "action": "Submit complete findings",
+      "timestamp": "2026-10-17T08:41:48Z"
+    },
+    {
+      "id": "7283a275-fe6c-4b0d-af82-ea68cee06620",
+      "action": "Task completed",
+      "timestamp": "2026-10-17T08:42:09Z"
+    }
+  ],
+  "num_of_steps": 18,
+  "recheck": {
+    "run_id": "19c2432b-8d0d-4bea-a7da-7c893b0e65c8",
+    "started_at": "2026-10-17T09:55:09.943Z",
+    "finished_at": "2026-10-17T09:56:14.514Z",
+    "status": "COMPLETED",
+    "countdowns": [
+      {
+        "text": "Offer ends in 04 MINS 59 SECS",
+        "seconds_remaining": 299,
+        "stage": "cart"
+      }
+    ],
+    "error": null
+  }
 }
