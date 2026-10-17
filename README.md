@@ -27,6 +27,80 @@ Most of these patterns live in the cart and checkout, behind clicks, pincodes, a
 
 The report lists all 13 patterns as found, for review, not found, or not checked, so a clean result is never overstated.
 
+## Architecture
+
+One Next.js app. TinyFish does the shopping, AutoAudit's own code does the judging, and results are saved as files.
+
+```mermaid
+flowchart LR
+  UI["Browser: audit, report, compare pages"] -->|"POST /api/audit (product URL)"| Audit["/api/audit"]
+  UI -->|"POST /api/recheck"| Recheck["/api/recheck"]
+  Audit --> Stream["lib/stream.ts: stream, save, 7-minute limit"]
+  Recheck --> Stream
+  Stream -->|"run-sse: goal + output_schema"| TinyFish["TinyFish Agent API: real browser"]
+  TinyFish -->|"STREAMING_URL, PROGRESS, COMPLETE"| Stream
+  Stream -->|"live events (SSE)"| UI
+  Stream --> Saved["data/saved/*.json"]
+  Saved --> Detectors["lib/detectors.ts: rules, no LLM"]
+  Detectors --> Report["Report: findings, coverage, rupee gap"]
+  Report --> UI
+  UI -->|"GET screenshot"| Shots["/api/runs/[id]/steps/[stepId]/screenshot"]
+  Shots -->|"fetch once"| TinyFish
+  Shots --> Cache["data/screens/ cache"]
+```
+
+### One audit, end to end
+
+```mermaid
+sequenceDiagram
+  participant S as Shopper (you)
+  participant A as AutoAudit server
+  participant T as TinyFish agent
+  participant D as Detectors
+  S->>A: Product page URL
+  A->>T: Goal + output_schema (stealth browser)
+  T-->>A: STREAMING_URL (live view)
+  T-->>A: PROGRESS: open product, pincode, add to cart, checkout...
+  A-->>S: Live browser + step log + stage tracker
+  T-->>A: COMPLETE: observation JSON
+  A->>T: GET run steps
+  A->>A: Save data/saved/{run_id}.json
+  S->>A: Open /audit/{run_id}
+  A->>D: Observation
+  D-->>A: Findings + 13-pattern coverage
+  A-->>S: Report with screenshots
+```
+
+### The main design rule: the agent observes, the code judges
+
+- **The agent observes.** The goal in `lib/journey.ts` asks for facts only. The `output_schema` forces a fixed shape: the listed price, fee lines with the stage each first appeared, cart items with `added_by_shopper`, pre-selected options, decline wording, urgency claims, the furthest stage reached, and what blocked the run. Missing values are `null`, never guessed.
+- **The code judges.** `lib/detectors.ts` is a set of pure functions: one observation in, findings out. The same observation always gives the same findings, and each one can be explained in one sentence.
+- **Proof comes from TinyFish.** `lib/evidence.ts` matches each finding to the agent step for that stage. The screenshot route fetches the image from TinyFish once and caches it.
+
+### Data
+
+| Data | Where | Shape |
+| --- | --- | --- |
+| Observation | `COMPLETE.result` from TinyFish | `Observation` in `lib/types.ts` |
+| Saved audit | `data/saved/{run_id}.json` | `SavedRun`: URL, timings, progress, steps, observation, recheck |
+| Finding | Built on every page load | `pattern`, `severity` (high, medium, review), `title`, `summary`, `amount_inr`, `quote`, `stage` |
+| Coverage | Built on every page load | Each of 13 patterns: found, review, not found, or not checked |
+| Screenshots | `data/screens/{run_id}/{step_id}.jpg` | JPEG, cached on first view |
+
+### Safety and cost control
+
+- The TinyFish key lives only on the server, in `.env.local`.
+- The agent never pays, never enters card or UPI details, never creates an account, and never submits a phone number to an OTP screen.
+- Runs are cancelled on TinyFish when the browser disconnects, when the user clicks Cancel, or after 7 minutes on the server.
+- Saved audits reopen without spending credits.
+
+### Stack
+
+- Next.js 15 (App Router), React 19, TypeScript, Tailwind CSS
+- TinyFish Agent API over `fetch`, with Server-Sent Events (SSE) parsed by hand
+- No database: JSON files and cached screenshots
+- No LLM on our side: the only model is the TinyFish agent doing the browsing
+
 ## Where TinyFish fits
 
 | TinyFish API | Used for |
@@ -78,8 +152,18 @@ lib/
   journey.ts                   goals and output schemas
   detectors.ts                 observations in, findings out
   patterns.ts                  the 13 CCPA patterns
+  types.ts                     Observation, Finding, SavedRun, Audit
   tinyfish.ts                  TinyFish API client and SSE parsing
   stream.ts                    streaming, saving, and the run time limit
+  saved.ts                     reading and writing saved audits
+  audits.ts                    loading and ranking audits
+  evidence.ts                  matching findings to step screenshots
+  use-run.ts                   browser hook for live run events
+components/
+  LiveAudit.tsx                live browser, stage tracker, step log
+  CompareRunner.tsx            parallel audits on the compare page
+  RecheckButton.tsx            fresh-session countdown recheck
+  Shot.tsx                     screenshot with a text fallback
 data/
   saved/                       finished audits
   screens/                     cached step screenshots
